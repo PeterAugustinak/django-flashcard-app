@@ -21,10 +21,10 @@ What was done within this project:
 App screens:
 
 All cards:
-![img.png](img.png)
+![img.png](app_imgs/img.png)
 
 Check card:
-![img_1.png](img_1.png)
+![img_1.png](app_imgs/img_1.png)
 
 Edit card:
-![img_2.png](img_2.png)
+![img_2.png](app_imgs/img_2.png)
