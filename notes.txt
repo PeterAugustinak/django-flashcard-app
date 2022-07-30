@@ -3,3 +3,30 @@
 django-admin startproject flashcards .
 # run server
 python manage.py runserver
+# create app - one project can have several apps
+python manage.py startapp cards
+# add created app to settings.py
+INSTALLED_APPS = [
+    "[app-name].apps.[aoo-name]Config",
+]
+# add url routing to urls.py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", include("cards.urls")),
+]
+# create app/urls.py and add template
+from django.urls import path
+from django.views.generic import TemplateView
+
+urlpatterns = [
+    path(
+        "",
+        TemplateView.as_view(template_name="cards/base.html"),
+        name="home"
+    ),
+]
+# create html template in app/templates/app/
+
