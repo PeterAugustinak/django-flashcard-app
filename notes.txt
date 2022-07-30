@@ -63,3 +63,9 @@ INSTALLED_APPS = [
 # add new template to card_list.html
 {% include "cards/card.html" %}
 # create template for card
+
+# GENERAL PROCESS:
+# create view - add route - create template
+# Whenever you post content in Django forms, you must also provide a
+# {% csrf_token %} template tag. This is a security measure to prevent
+# cross-site request forgery.

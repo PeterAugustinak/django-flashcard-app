@@ -44,6 +44,7 @@ button,
 a[role="button"] {
     color: white;
     text-decoration: none;
+    background: orange;
 }
 
 input, select, textarea {
@@ -54,6 +55,7 @@ input, select, textarea {
 <body>
     <header>
         <h1>Flashcard App</h1>
+        {% include "cards/navigation.html" %}
         <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     </header>
 
