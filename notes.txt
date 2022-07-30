@@ -29,4 +29,37 @@ urlpatterns = [
     ),
 ]
 # create html template in app/templates/app/
+# create Card model in models.py = database table
+# make migration of the created table
+python manage.py makemigrations
+# and migrate this changes
+python manage.py migrate
+# adding data into database from Django shell
+python manage.py shell
+# import class and start adding objects
+c1 = Card(question='', answer='', box='')
+c1. save()
+# show existing objects
+Card.objects.all()
 
+# create view to be able to see Cards in fronted in views.py
+# create new template for card list in app/templates/app
+# change urls to map CardList view instead of TemplateView
+# "humanizing" your app by adding humanize app to settings.py
+INSTALLED_APPS = [
+    ...
+    "django.contrib.humanize",
+    "cards.apps.CardsConfig",
+]
+# load humanize filter into the template where you want to use it
+{% load humanize %}
+# apply folllowing tag to show box name only when number is changed plys by using
+# | ordinal you apply humanize filter to change number to strings
+    {% ifchanged %}
+        <h3>🗃 {{ card.box | ordinal }} Box</h3>
+    {% endifchanged %}
+
+# as card will be shown in another places, create separate template for card
+# add new template to card_list.html
+{% include "cards/card.html" %}
+# create template for card
