@@ -1,0 +1,5 @@
+# start django project - creates structure for app (. in the end means
+# create in this directory
+django-admin startproject flashcards .
+# run server
+python manage.py runserver
