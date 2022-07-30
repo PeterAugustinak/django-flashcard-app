@@ -1,10 +1,8 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
-
 NUM_BOXES = 5
 BOXES = range(1, NUM_BOXES + 1)
+
 
 class Card(models.Model):
     question = models.CharField(max_length=100)
